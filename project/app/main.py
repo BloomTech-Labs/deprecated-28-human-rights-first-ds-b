@@ -1,17 +1,17 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.routes import getdata
+from app.routes import reports
 
 
 api = FastAPI(
-    title='Human-Rights-First-Labs28-ds-b',
-    description='',
-    version='0.1',
+    title='hrf-labs28-ds-b',
+    description='DS API',
+    version='0.7',
     docs_url='/',
 )
 
-api.include_router(getdata.router)
+api.include_router(reports.router)
 
 
 api.add_middleware(
