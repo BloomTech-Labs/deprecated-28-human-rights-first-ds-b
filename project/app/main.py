@@ -7,7 +7,7 @@ from app.routes import reports
 api = FastAPI(
     title='hrf-labs28-ds-b',
     description='DS API',
-    version='0.2',
+    version='0.6',
     docs_url='/',
 )
 
