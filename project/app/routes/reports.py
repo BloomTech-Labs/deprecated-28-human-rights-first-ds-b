@@ -1,4 +1,5 @@
 from fastapi import APIRouter
+
 from app.utilities import get_data
 
 
@@ -10,18 +11,18 @@ DF = get_data()  # Global Data Source - pd.DataFrame
 async def report_by_id(idx: str):
     """ Get report by id """
     result = DF.iloc[int(idx)]
-    return result.to_json(orient="records")
+    return result.to_json(orient="columns")
 
 
 @router.get('/report-by-city/')
 async def report_by_city(city: str):
     """ Get report by city """
     result = DF[DF['city'] == city]
-    return result.to_json(orient="records")
+    return result.to_json(orient="columns")
 
 
 @router.get('/report-by-state/')
 async def report_by_state(state: str):
     """ Get report by state """
     result = DF[DF['state'] == state]
-    return result.to_json(orient="records")
+    return result.to_json(orient="columns")
