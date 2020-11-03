@@ -18,12 +18,12 @@ async def report_by_id(idx: str):
 @router.get('/report-by-city/')
 async def report_by_city(city: str):
     """ Get report by city """
-    result = DF[DF['city'] == city].to_json(orient="index")
+    result = DF[DF['city'] == city].to_json(orient="records")
     return json.loads(result)
 
 
 @router.get('/report-by-state/')
 async def report_by_state(state: str):
     """ Get report by state """
-    result = DF[DF['state'] == state].to_json(orient="index")
+    result = DF[DF['state'] == state].to_json(orient="records")
     return json.loads(result)
