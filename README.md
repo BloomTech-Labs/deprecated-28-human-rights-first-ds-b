@@ -1,4 +1,4 @@
-# Human Rights First, Police Use of Force Map
+# Human Rights First, Police Presence Map
 
     Uniting the world to stand against tyranny.
 
@@ -43,7 +43,7 @@
 
 ### AWS EB Deployment Instructions
 ```
-$ eb init us-east-1                     # Setup EB to run locally
+$ eb init --platform docker us-east-1   # Setup EB to run locally
 $ eb create <app name>                  # Creates an app named <app name>
 $ eb use <app name>                     # Sets the default app to the one you name
 $ eb setenv DB_KEY=42 DB_SECRET=314     # Sets evironment variables for remote server
