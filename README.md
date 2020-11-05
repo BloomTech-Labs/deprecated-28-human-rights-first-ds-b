@@ -1,6 +1,6 @@
 # Human Rights First, Police Use of Force Map
 
-You can find the deployed project here: Todo
+    Uniting the world to stand against tyranny.
 
 ## Labs28 HRF-B Contributors
 - Jazmine McGinnis, Backend Web
