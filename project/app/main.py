@@ -1,17 +1,18 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.routes import reports
+from app.routes import reports, predict
 
 
 api = FastAPI(
     title='hrf-labs28-ds-b',
     description='DS API',
-    version='0.7',
+    version='0.8',
     docs_url='/',
 )
 
 api.include_router(reports.router)
+api.include_router(predict.router)
 
 
 api.add_middleware(
