@@ -1,9 +1,6 @@
 import en_core_web_md
-import joblib
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.neighbors import NearestNeighbors
-
-from modeling.training_data import ranked_reports
 
 
 class TextMatcher:
@@ -49,8 +46,3 @@ class TextMatcher:
             return self.name_index[int(idx)]
         else:
             return 'Rank 0 - No Police Presence'
-
-
-if __name__ == '__main__':
-    model = TextMatcher(ranked_reports)
-    joblib.dump(model, 'model.joblib')
