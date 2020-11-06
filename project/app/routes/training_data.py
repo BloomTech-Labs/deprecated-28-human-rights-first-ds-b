@@ -33,7 +33,7 @@ ranked_reports = {
     },
     "Rank 2 - Empty-hand Control": {
         "Example 1": "Protesters are quickly and violently pushed onto the ground, resulting in forceful removal.",
-        "Example 2": "One individual can be seen bleeding from the mouth after being struck, before being pushed to the ground.",
+        "Example 2": "Protesters being struck, before being pushed to the ground.",
         "Example 3": "Police in riot gear charge peaceful crowd, beat them with shields.",
         "Example 4": "Officers use grabs, holds and joint locks to restrain an individual.",
         "Example 5": "Officers use punches and kicks to restrain an individual.",
