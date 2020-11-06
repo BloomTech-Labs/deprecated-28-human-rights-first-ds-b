@@ -1,4 +1,4 @@
-import en_core_web_md
+import en_core_web_sm
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.neighbors import NearestNeighbors
 
@@ -8,7 +8,7 @@ class TextMatcher:
 
     class Tokenizer:
         """ Standard SpaCy Tokenizer """
-        nlp = en_core_web_md.load()
+        nlp = en_core_web_sm.load()
 
         def __call__(self, text: str) -> list:
             return [
