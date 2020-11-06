@@ -25,22 +25,22 @@ Officers use deadly weapons such as firearms to stop an individual's actions.
 
 ranked_reports = {
     "Rank 1 - Police Presence": [
-        "police officers in riot gear, cop, five-o, fuzz",
+        "police officer, cop, five-o, fuzz",
     ],
     "Rank 2 - Empty-hand": [
-        "police officers in riot gear, cop, five-o, fuzz",
+        "police officer, cop, five-o, fuzz",
         "pushed and shoved with shields",
         "grabs, holds and joint locks",
         "punch and kick",
     ],
     "Rank 3 - Blunt Force": [
-        "police officers in riot gear, cop, five-o, fuzz",
+        "police officer, cop, five-o, fuzz",
         "rubber bullets",
         "riot rounds",
         "batons",
     ],
     "Rank 4 - Chemical & Electric": [
-        "police officers in riot gear, cop, five-o, fuzz",
+        "police officer, cop, five-o, fuzz",
         "tear gas",
         "pepper spray",
         "flashbangs, stun grenade",
@@ -48,7 +48,7 @@ ranked_reports = {
         "Conducted energy devices, CED or tazor",
     ],
     "Rank 5 - Lethal Force": [
-        "police officers in riot gear, cop, five-o, fuzz",
+        "police officer, cop, five-o, fuzz",
         "killed",
         "opened fire",
         "deadly force",

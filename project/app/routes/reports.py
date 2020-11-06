@@ -31,3 +31,11 @@ async def report_by_state(state: str):
     returns a list of reports as JSON objects """
     result = DF[DF["state"] == state.title()].to_json(orient="records")
     return json.loads(result)
+
+
+@router.get("/full-report/")
+async def full_report():
+    """ Get all reports
+    returns a list of reports as JSON objects """
+    result = DF.to_json(orient="records")
+    return json.loads(result)
