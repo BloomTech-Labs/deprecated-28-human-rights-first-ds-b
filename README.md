@@ -43,12 +43,12 @@
 
 ### AWS EB Deployment Instructions
 ```
-$ eb init --platform docker us-east-1   # Setup EB to run locally
-$ eb create <app name>                  # Creates an app named <app name>
-$ eb use <app name>                     # Sets the default app to the one you name
-$ eb setenv DB_KEY=42 DB_SECRET=314     # Sets evironment variables for remote server
-$ eb deploy -l v0.0.1                   # Pushes yur app to the cloud and sets the version
-$ eb open                               # Opens your live app in a web browser
+$ eb init <env name> --platform docker us-east-1    # Setup EB to run locally
+$ eb create <app name>                              # Creates an app named <app name>
+$ eb use <app name>                                 # Sets the default app to the one you name
+$ eb setenv DB_KEY=42 DB_SECRET=314                 # Sets evironment variables for remote server
+$ eb deploy -l v0.0.1                               # Pushes yur app to the cloud and sets the version
+$ eb open                                           # Opens your live app in a web browser
 ```
 To update an existing environment with all currently committed changes:
 `$ eb deploy -l v0.0.2` The version here should match your app version.

@@ -16,7 +16,7 @@ class TextMatcher:
                 if not token.is_stop and not token.is_punct
             ]
 
-    def __init__(self, train_data: dict, ngram_range=(1, 3), max_features=10000):
+    def __init__(self, train_data: dict, ngram_range=(1, 2), max_features=5000):
         """ Model training on live data at init """
         self.lookup = {
             k: '; '.join(itm for itm in v.values())
