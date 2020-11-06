@@ -3,7 +3,7 @@ import joblib
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.neighbors import NearestNeighbors
 
-from modeling.training_data import ranked_reports
+from app.routes.training_data import ranked_reports
 
 
 class TextMatcher:

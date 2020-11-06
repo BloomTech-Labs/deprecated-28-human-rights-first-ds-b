@@ -44,7 +44,7 @@
 ### AWS EB Deployment Instructions
 ```
 $ eb init <app name> --platform docker --region us-east-1
-$ eb create <env name> -l v0.0.0
+$ eb create <env name>
 $ eb setenv DB_KEY=42 DB_SECRET=314
 $ eb deploy -l v0.0.1
 $ eb open
