@@ -24,39 +24,33 @@ Officers use deadly weapons such as firearms to stop an individual's actions.
 
 
 ranked_reports = {
-    "Rank 1 - Police Presence": {
-        "Example 1": "Police in riot gear yell at protesters.",
-        "Example 2": "Police blockade prevents marching to capitol steps.",
-        "Example 3": "Police refused to answer when protesters asked why they were being arrested.",
-        "Example 4": "Officers issue calm, nonthreatening commands.",
-        "Example 5": "The crowd was dispersed by police officers without incident.",
-    },
-    "Rank 2 - Empty-hand": {
-        "Example 1": "Protesters are violently pushed onto the ground by officers.",
-        "Example 2": "Protesters are being pushed and shoved by police.",
-        "Example 3": "Police in riot gear charge peaceful crowd, beat them with shields.",
-        "Example 4": "Officers use grabs, holds and joint locks to restrain an individual.",
-        "Example 5": "Officers use punches and kicks to restrain an individual.",
-    },
-    "Rank 3 - Blunt Force": {
-        "Example 1": "The police fire rubber bullets at the crowd.",
-        "Example 2": "Police in riot gear fire bean bags at protesters.",
-        "Example 3": "Police shooting riot rounds at protesters.",
-        "Example 4": "Protesters are struck with batons by police officers.",
-        "Example 5": "Blunt force impact. Officers may use a baton or projectile to immobilize.",
-    },
-    "Rank 4 - Chemical & Electric": {
-        "Example 1": "Police use tear gas and pepper spray.",
-        "Example 2": "Police in riot gear pepper spray protesters.",
-        "Example 3": "Police deploy tear gas and flashbangs against protesters.",
-        "Example 4": "Chemical. Officers may use chemical sprays or projectiles embedded with chemicals.",
-        "Example 5": "Conducted Energy Devices. Officers use CEDs to immobilize an individual.",
-    },
-    "Rank 5 - Lethal Force": {
-        "Example 1": "Protesters shot and killed by police.",
-        "Example 2": "Police kill a protester.",
-        "Example 3": "Police in riot gear open fire on a group of protesters.",
-        "Example 4": "Police officers use deadly force.",
-        "Example 5": "Police drive into a crowd killing several protesters.",
-    },
+    "Rank 1 - Police Presence": [
+        "police officers in riot gear, cop, five-o, fuzz",
+    ],
+    "Rank 2 - Empty-hand": [
+        "police officers in riot gear, cop, five-o, fuzz",
+        "pushed and shoved with shields",
+        "grabs, holds and joint locks",
+        "punch and kick",
+    ],
+    "Rank 3 - Blunt Force": [
+        "police officers in riot gear, cop, five-o, fuzz",
+        "rubber bullets",
+        "riot rounds",
+        "batons",
+    ],
+    "Rank 4 - Chemical & Electric": [
+        "police officers in riot gear, cop, five-o, fuzz",
+        "tear gas",
+        "pepper spray",
+        "flashbangs, stun grenade",
+        "chemical sprays",
+        "Conducted energy devices, CED or tazor",
+    ],
+    "Rank 5 - Lethal Force": [
+        "police officers in riot gear, cop, five-o, fuzz",
+        "killed",
+        "opened fire",
+        "deadly force",
+    ],
 }

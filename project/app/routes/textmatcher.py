@@ -1,9 +1,6 @@
-import en_core_web_md
-import joblib
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.neighbors import NearestNeighbors
-
-from app.routes.training_data import ranked_reports
+import en_core_web_sm
 
 
 class TextMatcher:
@@ -11,7 +8,7 @@ class TextMatcher:
 
     class Tokenizer:
         """ Standard SpaCy Tokenizer """
-        nlp = en_core_web_md.load()
+        nlp = en_core_web_sm.load()
 
         def __call__(self, text: str) -> list:
             return [
@@ -19,12 +16,9 @@ class TextMatcher:
                 if not token.is_stop and not token.is_punct
             ]
 
-    def __init__(self, train_data: dict, ngram_range=(1, 2), max_features=5000):
+    def __init__(self, train_data: dict, ngram_range=(1, 3), max_features=8000):
         """ Model training on live data at init """
-        self.lookup = {
-            k: '; '.join(itm for itm in v.values())
-            for k, v in train_data.items()
-        }
+        self.lookup = {k: ' '.join(v) for k, v in train_data.items()}
         self.name_index = list(self.lookup.keys())
         self.tfidf = TfidfVectorizer(
             ngram_range=ngram_range,
@@ -49,8 +43,3 @@ class TextMatcher:
             return self.name_index[int(idx)]
         else:
             return 'Rank 0 - No Police Presence'
-
-
-if __name__ == '__main__':
-    model = TextMatcher(ranked_reports)
-    joblib.dump(model, '../project/app/model.joblib')
