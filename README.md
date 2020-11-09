@@ -24,9 +24,17 @@
 - AWS Elastic Beanstalk
 
 ### Data Science API
-- `/report-by-id` Gets an incident report by index.
-- `/report-by-city` Gets a list of incident reports by city name.
-- `/report-by-state` Gets a list of incident reports by state name.
+- `/report-by-id/?idx=42` Gets an incident report by index.
+- `/report-by-city/?city=Seattle` Gets a list of incident reports by city name.
+- `/report-by-state/?state=Oregon` Gets a list of incident reports by state name.
+- `/full-report/` Gets the entire dataset in one shot.
+- `/predict/?text=blob%20of%20text...` Retrieves the predicted rank of a police report by severity.
+    - Rank 0: No police Presence
+    - Rank 1: Police Presence
+    - Rank 2: Empty-hand Force
+    - Rank 3: Blunt Force Weapons
+    - Rank 4: Chemical & Electric Weapons
+    - Rank 5: Lethal Force
 
 ### Installation Instructions - Local Development Environment
 `$ pip install -r project/requirements.txt`
