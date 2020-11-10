@@ -1,4 +1,5 @@
 import json
+from os import getenv
 
 from pandas import DataFrame
 from fastapi import APIRouter
@@ -31,3 +32,5 @@ async def report_by_state(state: str):
     returns a list of reports as JSON objects """
     result = DF[DF["state"] == state].to_json(orient="records")
     return json.loads(result)
+
+
