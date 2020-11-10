@@ -22,7 +22,7 @@ async def report_by_id(idx: str):
 async def report_by_city(city: str):
     """ Get reports by city name
     returns a list of reports as JSON objects """
-    result = DF[DF["city"] == city].to_json(orient="records")
+    result = DF[DF["city"] == city.title()].to_json(orient="records")
     return json.loads(result)
 
 
@@ -30,7 +30,15 @@ async def report_by_city(city: str):
 async def report_by_state(state: str):
     """ Get reports by state name
     returns a list of reports as JSON objects """
-    result = DF[DF["state"] == state].to_json(orient="records")
+    result = DF[DF["state"] == state.title()].to_json(orient="records")
+    return json.loads(result)
+
+
+@router.get("/full-report/")
+async def full_report():
+    """ Get all reports
+    returns a list of reports as JSON objects """
+    result = DF.to_json(orient="records")
     return json.loads(result)
 
 
