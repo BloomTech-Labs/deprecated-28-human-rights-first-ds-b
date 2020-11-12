@@ -3,10 +3,10 @@ import json
 from pandas import DataFrame
 from fastapi import APIRouter
 
-from app.utilities import get_data
+from app.load import load_data
 
 router = APIRouter()
-DF: DataFrame = get_data()  # Global Data Source
+DF: DataFrame = load_data()  # Global Data Source
 
 
 @router.get("/report-by-id/")
