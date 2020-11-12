@@ -7,3 +7,4 @@ uvicorn==0.12.2
 joblib==0.17.0
 scikit-learn==0.23.2
 spacy==2.3.1
+beautifulsoup4==4.9.3
