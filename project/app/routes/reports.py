@@ -1,5 +1,3 @@
-import json
-
 from pandas import DataFrame
 from fastapi import APIRouter
 
@@ -13,29 +11,25 @@ DF: DataFrame = load_data()  # Global Data Source
 async def report_by_id(idx: str):
     """ Get report by id number
     returns a single report as JSON object """
-    result = DF.iloc[int(idx)].to_json(orient="index")
-    return json.loads(result)
+    return DF.iloc[int(idx)].to_dict()
 
 
 @router.get("/report-by-city/")
 async def report_by_city(city: str):
     """ Get reports by city name
     returns a list of reports as JSON objects """
-    result = DF[DF["city"] == city.title()].to_json(orient="records")
-    return json.loads(result)
+    return DF[DF["city"] == city.title()].to_dict(orient="records")
 
 
 @router.get("/report-by-state/")
 async def report_by_state(state: str):
     """ Get reports by state name
     returns a list of reports as JSON objects """
-    result = DF[DF["state"] == state.title()].to_json(orient="records")
-    return json.loads(result)
+    return DF[DF["state"] == state.title()].to_dict(orient="records")
 
 
 @router.get("/full-report/")
 async def full_report():
     """ Get all reports
     returns a list of reports as JSON objects """
-    result = DF.to_json(orient="records")
-    return json.loads(result)
+    return DF.to_dict(orient="records")
