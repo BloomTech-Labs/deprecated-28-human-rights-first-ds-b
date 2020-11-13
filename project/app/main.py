@@ -7,7 +7,7 @@ from app.routes import reports, predict
 api = FastAPI(
     title='hrf-labs28-ds-b',
     description='DS API',
-    version='0.9.9',
+    version='0.9.10',
     docs_url='/',
 )
 
