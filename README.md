@@ -2,6 +2,7 @@
 
     Uniting the world to stand against tyranny.
 
+
 ## Labs28 HRF-B Contributors
 - Jazmine McGinnis, Backend Web
 - Juan Alvarado-Arguello, Web
@@ -28,6 +29,7 @@
 - `/report-by-city/?city=Seattle` Gets a list of incident reports by city name.
 - `/report-by-state/?state=Oregon` Gets a list of incident reports by state name.
 - `/full-report/` Gets the entire dataset in one shot.
+- `/reload/` Reloads the data from source.
 - `/predict/?text=blob%20of%20text...` Retrieves the predicted rank of a police report by severity.
     - Rank 0: No police Presence
     - Rank 1: Police Presence
@@ -52,18 +54,16 @@
 ### AWS EB Deployment Instructions
 ```
 $ eb init <app name> --platform docker --region us-east-1
-$ eb create <env name>
 $ eb setenv DB_KEY=42 DB_SECRET=314
-$ eb deploy -l v0.0.1
+$ eb create <env name>
 $ eb open
 ```
-- eb init: Setup EB to run locally
-- eb create: Creates the app
+- eb init: Setup EB to run locally, creates the app
 - eb setenv: Sets environment variables for remote server
-- eb deploy: Pushes the most recent update
+- eb create: Creates the environment and pushes app to AWS
 - eb open: Opens the live app
 
 To update an existing environment with all currently committed changes:
-`$ eb deploy -l v0.0.2` The version here should match your app version.
+`$ eb deploy`
 
 For more info `$ eb -h` or view the docs online: [EB CLI Commands](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb3-cmd-commands.html)
