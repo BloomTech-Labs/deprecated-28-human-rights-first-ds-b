@@ -33,3 +33,11 @@ async def full_report():
     """ Get all reports
     returns a list of reports as JSON objects """
     return DF.to_dict(orient="records")
+
+
+@router.get("/reload/")
+async def reload():
+    """ Reloads data from source """
+    global DF
+    DF = load_data()
+    return True
